@@ -16,24 +16,32 @@ public class House {
 	@Column(name="ID")
 	private int id;
 	@Column(name="NUMBER")
-	int streetNumber;
+	int number;
 	@Column(name="STREET")
-	String streetName;
+	String street;
 	@Column(name="CITY")
 	String city;
 	@Column(name="ZIP")
 	int zip;
-
+	
 	// Constructors
 	public House() {
 		super();
 	}
 	
-	public House(int id, int streetNumber, String streetName, String city, int zip) {
+	public House(int number, String street, String city, int zip) {
+		super();
+		this.number = number;
+		this.street = street;
+		this.city = city;
+		this.zip = zip;
+	}
+
+	public House(int id, int number, String street, String city, int zip) {
 		super();
 		this.id = id;
-		this.streetNumber = streetNumber;
-		this.streetName = streetName;
+		this.number = number;
+		this.street = street;
 		this.city = city;
 		this.zip = zip;
 	}
@@ -47,20 +55,20 @@ public class House {
 		this.id = id;
 	}
 
-	public int getStreetNumber() {
-		return streetNumber;
+	public int getNumber() {
+		return number;
 	}
 
-	public void setStreetNumber(int streetNumber) {
-		this.streetNumber = streetNumber;
+	public void setNumber(int number) {
+		this.number = number;
 	}
 
-	public String getStreetName() {
-		return streetName;
+	public String getStreet() {
+		return street;
 	}
 
-	public void setStreetName(String streetName) {
-		this.streetName = streetName;
+	public void setStreet(String street) {
+		this.street = street;
 	}
 
 	public String getCity() {
@@ -78,12 +86,12 @@ public class House {
 	public void setZip(int zip) {
 		this.zip = zip;
 	}
-
+	
 	// Methods
 	@Override
 	public String toString() {
-		return "House [id=" + id + ", streetNumber=" + streetNumber + ", streetName=" + streetName + ", city=" + city
-				+ ", zip=" + zip + "]";
+		return "House [id=" + id + ", number=" + number + ", street=" + street + ", city=" + city + ", zip=" + zip
+				+ "]";
 	}
 
 }

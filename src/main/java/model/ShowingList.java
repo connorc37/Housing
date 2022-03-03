@@ -29,6 +29,14 @@ public class ShowingList {
 	public ShowingList() {
 		super();
 	}
+	
+	public ShowingList(String showingName, LocalDate showingDate, Realtor realtor, List<House> listOfShowings) {
+		super();
+		this.showingName = showingName;
+		this.showingDate = showingDate;
+		this.realtor = realtor;
+		this.listOfShowings = listOfShowings;
+	}
 
 	public ShowingList(int id, String showingName, LocalDate showingDate, Realtor realtor, List<House> listOfShowings) {
 		super();
