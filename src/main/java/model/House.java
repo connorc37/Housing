@@ -16,20 +16,20 @@ public class House {
 	@Column(name="ID")
 	private int id;
 	@Column(name="NUMBER")
-	int number;
+	String number;
 	@Column(name="STREET")
 	String street;
 	@Column(name="CITY")
 	String city;
 	@Column(name="ZIP")
-	int zip;
+	String zip;
 	
 	// Constructors
 	public House() {
 		super();
 	}
 	
-	public House(int number, String street, String city, int zip) {
+	public House(String number, String street, String city, String zip) {
 		super();
 		this.number = number;
 		this.street = street;
@@ -37,7 +37,7 @@ public class House {
 		this.zip = zip;
 	}
 
-	public House(int id, int number, String street, String city, int zip) {
+	public House(int id, String number, String street, String city, String zip) {
 		super();
 		this.id = id;
 		this.number = number;
@@ -55,11 +55,11 @@ public class House {
 		this.id = id;
 	}
 
-	public int getNumber() {
+	public String getNumber() {
 		return number;
 	}
 
-	public void setNumber(int number) {
+	public void setNumber(String number) {
 		this.number = number;
 	}
 
@@ -79,11 +79,11 @@ public class House {
 		this.city = city;
 	}
 
-	public int getZip() {
+	public String getZip() {
 		return zip;
 	}
 
-	public void setZip(int zip) {
+	public void setZip(String zip) {
 		this.zip = zip;
 	}
 	

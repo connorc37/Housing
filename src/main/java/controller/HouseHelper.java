@@ -54,7 +54,7 @@ static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("
 		return results;
 	}
 	
-	public House findHousesById(int toFind) {
+	public House findHouseById(int toFind) {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
 
@@ -63,7 +63,7 @@ static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("
 		return result;
 	}
 	
-	public List<House> findHousesByNumber(int toFind) {
+	public List<House> findHouseByNumber(String toFind) {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
 		TypedQuery<House> typedQuery = em.createQuery("select h from House h where h.number = :selectedNumber", House.class);
@@ -75,7 +75,7 @@ static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("
 		return results;
 	}
 	
-	public List<House> findHousesByStreet(String toFind) {
+	public List<House> findHouseByStreet(String toFind) {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
 		TypedQuery<House> typedQuery = em.createQuery("select h from House h where h.street = :selectedStreet", House.class);
@@ -87,7 +87,7 @@ static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("
 		return results;
 	}
 	
-	public List<House> findHousesByCity(String toFind) {
+	public List<House> findHouseByCity(String toFind) {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
 		TypedQuery<House> typedQuery = em.createQuery("select h from House h where h.city = :selectedCity", House.class);
@@ -99,7 +99,7 @@ static EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("
 		return results;
 	}
 	
-	public List<House> findHousesByZip(int toFind) {
+	public List<House> findHouseByZip(String toFind) {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
 		TypedQuery<House> typedQuery = em.createQuery("select h from House h where h.zip = :selectedZip", House.class);

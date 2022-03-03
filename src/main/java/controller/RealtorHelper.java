@@ -35,8 +35,10 @@ public class RealtorHelper {
 		
 		typedQuery.setParameter("selectedName", toFind);
 		
+		// Reminder to change if 1 doesn't work well.
 		typedQuery.setMaxResults(1);
 		Realtor result;
+		
 		try {
 			result = typedQuery.getSingleResult();
 		} catch (NoResultException ex) {
