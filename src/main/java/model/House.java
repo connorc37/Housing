@@ -15,34 +15,34 @@ public class House {
 	@GeneratedValue
 	@Column(name="ID")
 	private int id;
-	@Column(name="NUMBER")
-	String number;
 	@Column(name="STREET")
-	String street;
+	private String street;
 	@Column(name="CITY")
-	String city;
+	private String city;
+	@Column(name="STATE")
+	private String state;
 	@Column(name="ZIP")
-	String zip;
+	private String zip;
 	
 	// Constructors
 	public House() {
 		super();
 	}
 	
-	public House(String number, String street, String city, String zip) {
+	public House(String street, String city, String state, String zip) {
 		super();
-		this.number = number;
 		this.street = street;
 		this.city = city;
+		this.state = state;
 		this.zip = zip;
 	}
 
-	public House(int id, String number, String street, String city, String zip) {
+	public House(int id, String street, String city, String state, String zip) {
 		super();
 		this.id = id;
-		this.number = number;
 		this.street = street;
 		this.city = city;
+		this.state = state;
 		this.zip = zip;
 	}
 	
@@ -53,14 +53,6 @@ public class House {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public String getNumber() {
-		return number;
-	}
-
-	public void setNumber(String number) {
-		this.number = number;
 	}
 
 	public String getStreet() {
@@ -78,6 +70,14 @@ public class House {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
 
 	public String getZip() {
 		return zip;
@@ -86,12 +86,11 @@ public class House {
 	public void setZip(String zip) {
 		this.zip = zip;
 	}
-	
+
 	// Methods
 	@Override
 	public String toString() {
-		return "House [id=" + id + ", number=" + number + ", street=" + street + ", city=" + city + ", zip=" + zip
-				+ "]";
+		return "House [id=" + id + ", street=" + street + ", city=" + city + ", state=" + state + ", zip=" + zip + "]";
 	}
 
 }

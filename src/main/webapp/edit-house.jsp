@@ -7,8 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-neat stuff here like the houseToEdit attribute
-
+	<form action="editHouseServlet" method="post">
+		Street: <input type="text" name="street" value="${houseToEdit.street}">
+		City: <input type="text" name="city" value="${houseToEdit.city}">
+		State: <input type="text" name="state" value="${houseToEdit.state}">
+		Zip Code: <input type="text" name="zip" value="${houseToEdit.zip}">
+		<input type="hidden" name="id" value="${houseToEdit.id}">
+		<input type="submit" value="Save Edit">
+	</form>
 </body>
 </html>
