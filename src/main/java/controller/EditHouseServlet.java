@@ -29,17 +29,17 @@ public class EditHouseServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HouseHelper hh = new HouseHelper();
-		
-		String number = request.getParameter("number");
+		;
 		String street = request.getParameter("street");
 		String city = request.getParameter("city");
+		String state = request.getParameter("state");
 		String zip = request.getParameter("zip");
 		int tmpId = Integer.parseInt(request.getParameter("id"));
 		
 		House houseToEdit = hh.findHouseById(tmpId);
-		houseToEdit.setNumber(number);
 		houseToEdit.setStreet(street);
 		houseToEdit.setCity(city);
+		houseToEdit.setState(state);
 		houseToEdit.setZip(zip);
 		
 		hh.editHouse(houseToEdit);

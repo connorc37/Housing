@@ -28,12 +28,12 @@ public class AddHouseServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String number = request.getParameter("number");
 		String street = request.getParameter("street");
 		String city = request.getParameter("city");
+		String state = request.getParameter("state");
 		String zip = request.getParameter("zip");
 		
-		House h = new House(number, street, city, zip);
+		House h = new House(street, city, state, zip);
 		HouseHelper hh = new HouseHelper();
 		hh.addHouse(h);
 
