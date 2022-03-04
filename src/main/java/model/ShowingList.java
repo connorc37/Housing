@@ -20,8 +20,10 @@ public class ShowingList {
 	private int id;
 	private String showingName;
 	private LocalDate showingDate;
-	private Realtor realtor; // @ManyToOne (cascade=CascadeType.PERSIST)
-	private List<House> listOfShowings; // @OneToMany(cascade=CascadeType.MERGE, fetch=FetchType.EAGER)
+	@ManyToOne (cascade=CascadeType.PERSIST)
+	private Realtor realtor;
+	@OneToMany(cascade=CascadeType.MERGE, fetch=FetchType.EAGER)
+	private List<House> listOfShowings;
 
 	// Constructors
 	public ShowingList() {

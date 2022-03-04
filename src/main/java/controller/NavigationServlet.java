@@ -34,16 +34,16 @@ public class NavigationServlet extends HttpServlet {
 		
 		if (action.equals("remove")) {
 			try {
-				int tempId = Integer.parseInt(request.getParameter("id"));
-				House houseToRemove = hh.findHouseById(tempId);
+				int tmpId = Integer.parseInt(request.getParameter("id"));
+				House houseToRemove = hh.findHouseById(tmpId);
 				hh.removeHouse(houseToRemove);
 			} catch (NumberFormatException e) {
 				System.out.println("A house wasn't selected");
 			}
 		} else if (action.equals("edit")) {
 			try {
-				int tempId = Integer.parseInt(request.getParameter("id"));
-				House houseToEdit = hh.findHouseById(tempId);
+				int tmpId = Integer.parseInt(request.getParameter("id"));
+				House houseToEdit = hh.findHouseById(tmpId);
 				request.setAttribute("houseToEdit", houseToEdit);
 				path = "/edit-house.jsp";
 			} catch (NumberFormatException e) {
