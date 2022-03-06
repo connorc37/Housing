@@ -45,7 +45,7 @@ public class ShowingListHelper {
 		em.close();
 	}
 	
-	public List<ShowingList> showShowingList() {
+	public List<ShowingList> getShowingList() {
 		EntityManager em = emfactory.createEntityManager();
 		List<ShowingList> results = em.createQuery("SELECT sl FROM ShowingList sl").getResultList();
 		return results;
