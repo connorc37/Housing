@@ -5,8 +5,24 @@
 <head>
 <meta charset="UTF-8">
 <title>Edit Showing</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+
+	<h1>
+		<strong>Edit Showing</strong>
+	</h1>
+	
+	<ul> 
+		<li><a href="index.html">Home</a></li>
+		<li><a href="viewAllHousesServlet">View all houses for sale</a></li>
+		<li><a href="viewAllShowingListsServlet">View all showing lists</a></li>
+		<li><a href="addHousesForShowingListServlet">Create a new showing list</a></li>
+	</ul>
+	
+	<div class="form-center">
 	<form action="editShowingListServlet" method="post">
 		<input type="hidden" name="id" value="${showingListToEdit.id}">
 		Showing list name:<input type="text" name="listName" value= "${showingListToEdit.showingName}"><br />
@@ -23,6 +39,6 @@
 
 		<input type="submit" value="Submit">
 	</form>
-	<a href="index.html">Add houses instead</a>
+	</div>
 </body>
 </html>

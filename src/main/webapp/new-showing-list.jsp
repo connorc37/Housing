@@ -5,8 +5,24 @@
 <head>
 <meta charset="UTF-8">
 <title>New Showing</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+
+	<h1>
+		<strong>Add New Showing</strong>
+	</h1>
+	
+	<ul> 
+		<li><a href="index.html">Home</a></li>
+		<li><a href="viewAllHousesServlet">View all houses for sale</a></li>
+		<li><a href="viewAllShowingListsServlet">View all showing lists</a></li>
+		<li><a href="addHousesForShowingListServlet">Create a new showing list</a></li>
+	</ul>
+	
+	<div class="form-center">
 	<form action="addShowingListServlet" method="post">
 		Showing list name: 
 		<input type="text" name="showingListName"><br />
@@ -30,8 +46,8 @@
 				</option>
 			</c:forEach>
 		</select><br />
-		<a href="index.html">House not listed? Add another!</a><br />
 		<input type="submit" value="Create">
 	</form>
+	</div>
 </body>
 </html>

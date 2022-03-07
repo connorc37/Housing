@@ -3,8 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <title>Home Page</title>
+
+<link rel="stylesheet" href="style.css">
+	
 </head>
 <body>
+	
+	<h1> 
+		<strong>Housing Market In Des Moines</strong>
+	</h1>
+	
+	<ul> 
+		<li><a href="index.html">Home</a></li>
+		<li><a href="viewAllHousesServlet">View all houses for sale</a></li>
+		<li><a href="viewAllShowingListsServlet">View all showing lists</a></li>
+		<li><a href="addHousesForShowingListServlet">Create a new showing list</a></li>
+	</ul>
+	
+	<div class="form-center">
 	<form action="addHouseServlet" method="post">
 		Street: <input type="text" name="street"><br />
 		City: <input type="text" name="city"><br />
@@ -12,8 +28,6 @@
 		ZIP Code: <input type="text" name="zip"><br />
 		<input type = "submit" value="Add House">
 	</form> <br>
-	<a href="viewAllHousesServlet">View all houses for sale</a><br>
-	<a href="viewAllShowingListsServlet">View all showing lists</a><br>
-	<a href="addHousesForShowingListServlet">Create a new showing list</a>
+	</div>
 </body>
 </html>

@@ -5,9 +5,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Showing Lists</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-<form method="post" action="showingListNavServlet">
+
+	<h1>
+		<strong>Showing List</strong>
+	</h1>
+	
+	<ul> 
+		<li><a href="index.html">Home</a></li>
+		<li><a href="viewAllHousesServlet">View all houses for sale</a></li>
+		<li><a href="viewAllShowingListsServlet">View all showing lists</a></li>
+		<li><a href="addHousesForShowingListServlet">Create a new showing list</a></li>
+	</ul>
+	
+	<div class="form-center">
+	<form method="post" action="showingListNavServlet">
 		<table>
 			<c:forEach items="${requestScope.allShowingLists}" var="item">
 				<tr>
@@ -35,6 +51,6 @@
 		<input type="submit" value="edit" name="doThisToShowingList">
 		<input type="submit" value="remove" name="doThisToShowingList">
 	</form>
-	<a href="index.html">Add a new house</a>
+	</div>
 </body>
 </html>
