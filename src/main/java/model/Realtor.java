@@ -14,6 +14,7 @@ public class Realtor {
 	@GeneratedValue
 	private int id;
 	private String name;
+	private String company;
 	
 	// Constructors
 	public Realtor() {
@@ -24,11 +25,18 @@ public class Realtor {
 		super();
 		this.name = name;
 	}
+	
+	public Realtor(String name, String company) {
+		super();
+		this.name = name;
+		this.company = company;
+	}
 
-	public Realtor(int id, String name) {
+	public Realtor(int id, String name, String company) {
 		super();
 		this.id = id;
 		this.name = name;
+		this.company = company;
 	}
 	
 	// Getters & setters
@@ -47,11 +55,19 @@ public class Realtor {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+
+	public String getCompany() {
+		return company;
+	}
+
+	public void setCompany(String company) {
+		this.company = company;
+	}
 
 	// Methods
 	@Override
 	public String toString() {
-		return "Realtor [id=" + id + ", name=" + name + "]";
+		return "Realtor [id=" + id + ", name=" + name + ", company=" + company + "]";
 	}
-
 }

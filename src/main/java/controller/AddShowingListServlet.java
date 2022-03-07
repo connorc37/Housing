@@ -40,6 +40,7 @@ public class AddShowingListServlet extends HttpServlet {
 		String day = request.getParameter("day");
 		String year = request.getParameter("year");
 		String realtorName = request.getParameter("realtorName");
+		String realtorCompany = request.getParameter("realtorCompany");
 
 		// Address the date.
 		LocalDate ld;
@@ -50,7 +51,7 @@ public class AddShowingListServlet extends HttpServlet {
 		}
 		
 		// Address the realtor.
-		Realtor r = new Realtor(realtorName);
+		Realtor r = new Realtor(realtorName, realtorCompany);
 		
 		// Address the selection
 		String[] selectedHouses = request.getParameterValues("housesToAdd");

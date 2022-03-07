@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Edit House</title>
 </head>
 <body>
 	<form action="editHouseServlet" method="post">

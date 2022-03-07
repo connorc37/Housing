@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>New Showing</title>
 </head>
 <body>
 	<form action="addShowingListServlet" method="post">
@@ -18,6 +18,9 @@
 		
 		Realtor name: 
 		<input type="text" name="realtorName"><br /> 
+		
+		Realtor company:
+		<input type="text" name="realtorCompany"><br />
 		
 		Houses:<br />
 		<select name="housesToAdd" multiple size="6">

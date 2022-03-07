@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Showing Lists</title>
 </head>
 <body>
 <form method="post" action="showingListNavServlet">
@@ -19,6 +19,9 @@
 				</tr>
 				<tr>
 					<td colspan="3">Realtor: ${item.realtor.name}</td>
+				</tr>
+				<tr>
+					<td colspan="3">Realtor Company: ${item.realtor.company}
 				</tr>
 				<c:forEach items="${item.listOfShowings}" var="currentItem">
 					<tr>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Edit Showing</title>
 </head>
 <body>
 	<form action="editShowingListServlet" method="post">
@@ -12,6 +12,7 @@
 		Showing list name:<input type="text" name="listName" value= "${showingListToEdit.showingName}"><br />
 		Showing date: <input type ="text" name="month" placeholder="mm" size="4" value= "${month}"> <input type ="text" name = "day" placeholder="dd" size="4" value= "${date}">, <input type ="text" name = "year" placeholder="yyyy" size="4" value= "${year}"><br />
 		Realtor name: <input type="text" name="realtorName" value="${showingListToEdit.realtor.name}"><br />
+		Realtor company: <input type="text" name="realtorCompany" value="${showingListToEdit.realtor.company}"><br />
 
 		Houses:<br />
 		<select name="allHousesToAdd" multiple size="6">
